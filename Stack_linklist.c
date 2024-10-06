@@ -13,10 +13,6 @@ struct Node* top = NULL;
 // Function to push an element onto the stack
 void push(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    if (newNode == NULL) {
-        printf("\nStack Overflow\n");
-        return;
-    }
     newNode->data = value;
     newNode->next = top; // Point new node to previous top
     top = newNode;       // Update top to new node
